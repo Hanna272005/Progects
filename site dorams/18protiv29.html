@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Дорама: Сказание о Кумихо</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/фон.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 120px; /* Увеличение отступа сверху, чтобы контент не налезал на хедер */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">О нас</a></li>
+                <li><a href="dorams.html">Дорамы</a></li>
+                <li><a href="calendar.html">Календарь релизов</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+                <li><a href="otziv.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <!--<img src="logo2 1.svg" alt="Логотип">-->
+            <a href="izbr.html" class="favorite-icon">&#128140;<!--<img src="img/iz1.png" alt="Избранное">--></a>
+        </div>  
+    </header>
+    <main>
+        <h1>18 против 29 </h1>
+        <div class="content1">
+            <div class="poster">
+                <img src="img/18_protiv_29.jpg" alt="18_protiv_29" sizes="30%">
+            </div>
+            <div class="info">
+                <p><strong>Другие названия:</strong> 18 vs. 29 / 18:29 / Eighteen vs Twenty-nine / Yeol-yeo-deol, Seu-mool-a-hob / Yoryodol, Sumurahop / 열여덟 스물아홉</p>
+                <p><strong>Страна:</strong> Южная Корея</p>
+                <p><strong>Премьера:</strong> 7 марта 2005</p>
+                <p><strong>Телеканал / платформа:</strong> KBS2 </p>
+                <p><strong>Продолжительность:</strong> 60 мин. / серия </p>
+                <p><strong>Кол-во серий:</strong> 16</p>
+                <p><strong>Рейтинг:</strong> <span class="rating">4.5</span></p>
+                <p><strong>В ролях:</strong> Пак Сон Ён, Рю Су Ён, Пак Ын Хе, Ли Хан Ви, Ли Сан У, Чон Да Хе и др.</p>
+                <p><strong>Жанры:</strong> 
+                    <span class="genre">Драма</span>
+                    <span class="genre">Комедия</span>
+                    <span class="genre">Романтика</span>
+                </p>
+                <button class="favorite-button" onclick="addToFavorites(this)">В избранное</button>
+            </div>
+        </div>
+        <div class="description">
+            <p> Главной героине Ю Хе Чан 29 лет. Она замужем за бывшим однокласником, а нынче известным актером, Кан Пон Маном. История открывается ее решением получить развод из-за измены мужа. По пути к зданию суда Ю Хе Чан попадает в автокатострофу и теряет память. Очнувшись в больнице, она думает, что ей 18 лет.</p>
+        </div>
+        <div class="trailer">
+            <h2>Трейлер</h2>
+            <iframe src="https://www.youtube.com/embed/8rIJj49LnB4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Все права защищены <br><a href="mailto:hannapisaryk@outlook.com" class="acti">Связь с администратором</a></p>
+    </footer>
+</body>
+</html>

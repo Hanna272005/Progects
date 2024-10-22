@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<title>Войти</title>
+<link rel="icon" type="image/png" sizes="120x120" href="/favicon-120x120.png">
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>
+<script type='text/javascript' src='https://doramy.club/wp-content/themes/doramy/js/js.js?v=5'></script>
+<meta name="robots" content="noindex,follow" />
+<meta name='robots' content='noindex,follow' />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('img/фон.jpg'); 
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .page-reg {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 70px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        max-width: 400px;
+        width: 100%;
+    }
+    .new-logreg {
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+    .new-logreg li {
+        display: inline;
+    }
+    .new-logreg a {
+        text-decoration: none;
+        font-size: 24px;
+        color: #333;
+    }
+    form p {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="password"] {
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .submitl-regs {
+        text-align: center;
+    }
+    .submitl-regs input[type="submit"] {
+        background: #de63ec;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .tml-action-links {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    .tml-action-links li {
+        display: inline;
+        margin-right: 10px;
+    }
+    .tml-action-links a {
+        text-decoration: none;
+        color: #de63ec;
+    }
+    .menu-reg {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .menu-reg a {
+        text-decoration: none;
+        color: #de63ec;
+    }
+    footer {
+        text-align: center;
+        margin-top: 20px;
+    }
+    footer a {
+        color: #de63ec;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">О нас</a></li>
+                <li><a href="dorams.html">Дорамы</a></li>
+                <li><a href="calendar.html">Календарь релизов</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+                <li><a href="otziv.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <!--<img src="logo2 1.svg" alt="Логотип">-->
+            <a href="izbr.html" class="favorite-icon">&#128140;<!--<img  src="img/iz1.png" alt="Избранное">--></a>
+        </div>
+    </header>
+    <div class="wrappers">
+        <div class="fullcontentr">
+            <div class="page-reg">
+                <ul class="new-logreg">
+                    <li><a href="index.html"><span>DoramaChoice</span></a></li>
+                </ul>
+                <div class="login" id="theme-my-login">
+                    <form name="loginform" id="loginform" action="/regs-login" method="post">
+                        <p>
+                            <b>Логин</b>
+                            <label for="user_login"></label>
+                            <input type="text" name="log" id="user_login" class="input" value="" size="20" required/>
+                        </p>
+                        <p>
+                            <b>Пароль</b>
+                            <label for="user_pass"></label>
+                            <input type="password" name="pwd" id="user_pass" class="input" value="" size="20" required/>
+                        </p>
+                        <input type="hidden" name="_wp_original_http_referer" value="" />
+                        <input id="check" name="proverka" style="display:none;" type="text" value="" />
+                        <p class="submitl-regs">
+                            <input type="submit" name="wp-submit-proverka" id="wp-submit" value="Войти" onclick="document.getElementById('check').value = 'polesecret';" />
+                            <input type="hidden" name="redirect_to" value="https://DoramaChoice.by/wp-admin/" />
+                            <input type="hidden" name="instance" value="" />
+                            <input type="hidden" name="action" value="login" />
+                        </p>
+                    </form>
+                    <div style="clear:both;margin-bottom: 10px;"></div>
+                    <ul class="tml-action-links">
+                        <li><a href="registr.html" rel="nofollow">Регистрация</a></li>
+                    </ul>
+                </div>
+                <div class="menu-reg">
+                        <a href="index.html">Вернуться на главную</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function wp_attempt_focus() {
+            setTimeout( function() {
+                try {
+                    d = document.getElementById('user_login');
+                    d.value = '';
+                    d.focus();
+                } catch(e){}
+            }, 200 );
+        }
+        wp_attempt_focus();
+        if(typeof wpOnload=='function')wpOnload()
+    </script>
+</body>
+</html>

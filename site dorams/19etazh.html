@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Дорама: Сказание о Кумихо</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/фон.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 120px; /* Увеличение отступа сверху, чтобы контент не налезал на хедер */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">О нас</a></li>
+                <li><a href="dorams.html">Дорамы</a></li>
+                <li><a href="calendar.html">Календарь релизов</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+                <li><a href="otziv.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <!--<img src="logo2 1.svg" alt="Логотип">-->
+            <a href="izbr.html" class="favorite-icon">&#128140;<!--<img src="img/iz1.png" alt="Избранное">--></a>
+        </div>  
+    </header>
+    <main>
+        <h1>19 этаж </h1>
+        <div class="content1">
+            <div class="poster">
+                <img src="img/19_etazh.jpg" alt="19_etazh" sizes="30%">
+            </div>
+            <div class="info">
+                <p><strong>Другие названия:</strong> 19th Floor / 19 Ceng / 19-й этаж ада / Di Yu De Di 19 Ceng / The Nineteenth Floor of Hell / 地狱的第十九层 / 19层</p>
+                <p><strong>Страна:</strong> Китай</p>
+                <p><strong>Премьера:</strong> 16 января 2024</p>
+                <p><strong>Телеканал / платформа:</strong> Mango TV </p>
+                <p><strong>Продолжительность:</strong> 40 мин. / серия </p>
+                <p><strong>Кол-во серий:</strong> 30</p>
+                <p><strong>Рейтинг:</strong> <span class="rating">4.5</span></p>
+                <p><strong>В ролях:</strong> Сунь Цянь, Вэй Чжэ Мин, Бай Шу, Ван Жо Шань, Ло Юй Тун, Пан Юэ Тун и др.</p>
+                <p><strong>Жанры:</strong> 
+                    <span class="genre">Приключение</span>
+                    <span class="genre">Триллер</span>
+                    <span class="genre">Фантастика</span>
+                    <span class="genre">Саспенс</span>
+                </p>
+                <button class="favorite-button" onclick="addToFavorites(this)">В избранное</button>
+            </div>
+        </div>
+        <div class="description">
+            <p> Студентка Чун Ю оказывается вовлечена в игру под названием «19-й этаж». Вместе с другими участниками игры ей предстоит сбежать из «призрачного здания», полного теней, и заброшенной деревни, населенной куклами-марионетками. Те, кто не выполнит задания игры на разных этапах, впадают в кому в реальности. Чтобы выжить и вернуться домой, Чун Ю нужно выяснить причину, по которой они все попали в игру.
+                <br>
+                <br>Адаптировано из романа Цай Цзюня «Девятнадцатый этаж ада» (地狱的第十九层)
+                 </p>
+        </div>
+        <div class="trailer">
+            <h2>Трейлер</h2>
+            <iframe src="https://www.youtube.com/embed/_AGjNAkx-SY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Все права защищены <br><a href="mailto:hannapisaryk@outlook.com" class="acti">Связь с администратором</a></p>
+    </footer>
+</body>
+</html>

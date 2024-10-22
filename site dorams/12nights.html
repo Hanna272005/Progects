@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Дорама: Сказание о Кумихо</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/фон.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 120px; /* Увеличение отступа сверху, чтобы контент не налезал на хедер */
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">О нас</a></li>
+                <li><a href="dorams.html">Дорамы</a></li>
+                <li><a href="calendar.html">Календарь релизов</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+                <li><a href="otziv.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <!--<img src="logo2 1.svg" alt="Логотип">-->
+            <a href="izbr.html" class="favorite-icon">&#128140;<!--<img src="img/iz1.png" alt="Избранное">--></a>
+        </div>  
+    </header>
+    <main>
+        <h1>12 Ночей </h1>
+        <div class="content1">
+            <div class="poster">
+                <img src="img/12_nights.jpg" alt="12_nights" sizes="30%">
+            </div>
+            <div class="info">
+                <p><strong>Другие названия:</strong> 12 Nights / Twelve Nights / Yeoldoobam / Двенадцать ночей / 열두 밤</p>
+                <p><strong>Страна:</strong> Южная Корея</p>
+                <p><strong>Премьера:</strong> 12 октября 2018</p>
+                <p><strong>Телеканал / платформа:</strong> Channel A </p>
+                <p><strong>Продолжительность:</strong> 80 мин. / 01:20 / серия </p>
+                <p><strong>Кол-во серий:</strong> 12</p>
+                <p><strong>Рейтинг:</strong> <span class="rating">4.1</span></p>
+                <p><strong>В ролях:</strong> Хан Сы Ён, Син Хён Су, Ким Гю Ри, Хван Со Хи, Чан Хён Сон, Йе Су Чжон и др.</p>
+                <p><strong>Жанры:</strong> 
+                    <span class="genre">Драма</span>
+                    <span class="genre">Романтика</span>
+                </p>
+                <button class="favorite-button" onclick="addToFavorites(this)">В избранное</button>
+            </div>
+        </div>
+        <div class="description">
+            <p> Дорама о путешествии мужчины и женщины, которые вместе проводят 12 ночей в трех поездках. </p>
+        </div>
+        <div class="trailer">
+            <h2>Трейлер</h2>
+            <iframe src="https://www.youtube.com/embed/watch?v=XPBJo7fi-bE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <script src="js/poisk.js"></script>
+    </main>
+    <footer>
+        <p>&copy; Все права защищены <br><a href="mailto:hannapisaryk@outlook.com" class="acti">Связь с администратором</a></p>
+    </footer>
+</body>
+</html>

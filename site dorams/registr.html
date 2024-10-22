@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://doramy.club/wp-content/themes/doramy/js/js.js?v=5"></script>
+    <meta name="robots" content="noindex,follow">
+    <link rel="canonical" href="https://doramy.club/regs-register">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('img/фон.jpg'); 
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .page-reg {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+        .new-logreg {
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        .new-logreg li {
+            display: inline;
+        }
+        .new-logreg a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #333;
+        }
+        .message {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        form p {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submitl-regs {
+            text-align: center;
+        }
+        .submitl-regs input[type="submit"] {
+            background: #de63ec;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .tml-action-links {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+            text-align: center;
+        }
+        .tml-action-links li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .tml-action-links a {
+            text-decoration: none;
+            color: #de63ec;
+        }
+        .menu-reg {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .menu-reg a {
+            text-decoration: none;
+            color: #de63ec;
+        }
+        #sose {
+            color: rgb(247, 0, 255);
+            display: none;
+        }
+        .Email-list {
+            overflow: hidden;
+            margin-top: 5px;
+            background: #fffec2;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .Email-list i {
+            color: #333;
+            font-style: normal;
+            font-weight: 400;
+        }
+        .ulemail {
+            margin-top: 5px;
+        }
+        .ulemail li {
+            width: 50%;
+            float: left;
+        }
+        .i-Email {
+            cursor: pointer;
+            border-bottom: 1px solid #e8b9e1;
+            color: #bd74b7;
+            font-style: normal;
+        }
+        #email-submit {
+            float: right;
+            background: #de63ec;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px 10px;
+            margin: 25px 0;
+            border-radius: 5px;
+            display: none;
+        }
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">О нас</a></li>
+                <li><a href="dorams.html">Дорамы</a></li>
+                <li><a href="calendar.html">Календарь релизов</a></li>
+                <li><a href="contact.html">Обратная связь</a></li>
+                <li><a href="otziv.html">Отзывы</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <!--<img src="logo2 1.svg" alt="Логотип">-->
+            <a href="izbr.html" class="favorite-icon">&#128140;<!--<img  src="img/iz1.png" alt="Избранное">--></a></a>  
+        </div>
+    </header>
+    <div class="wrapper">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="fullcontentr">
+            <div class="page-reg">
+                <ul class="new-logreg">
+                    <li><a href="index.html"><span>DoramaChoice</span></a></li>
+                </ul>
+                <div class="login" id="theme-my-login">
+                    <p class="message">Зарегистрироваться на сайте</p>
+                    <form name="registerform" id="registerform" action="/regs-register" method="post">
+                        <p>
+                            <label for="user_login"><b>Логин</b> <i>(минимум 3 символа англ. Без точек)</i></label>
+                            <input type="text" pattern="[A-Za-z0-9_-]{3,15}" name="user_login" id="user_login" class="input" size="20" required>
+                        </p>
+                        <p>
+                            <label for="user_email"><b>E-mail</b> <i>(нужен для подтверждения)</i></label>
+                            <input type="email" name="user_email" id="user_email" class="input" size="20" required>
+                            <div id="sose" style="display:none;">
+                                <span>Почта введена неправильно.</span> <i class="i-Email">Что с ней не так?</i>
+                                <div class="Email-list" style="display:none;">
+                                    <i>Скорее всего ошибка после <b>символа @</b>. Вот список правильных и доступных для регистрации емейлов:</i>
+                                    <ul class="ulemail">
+                                        <li>@mail.ru</li>
+                                        <li>@gmail.com</li>
+                                        <li>@yandex.ru</li>
+                                        <li>@ukr.net</li>
+                                        <li>@internet.ru</li>
+                                        <li>@bk.ru</li>
+                                        <li>@inbox.ru</li>
+                                        <li>@icloud.com</li>
+                                        <li>@zschocho.cz</li>
+                                        <li>@abv.bg</li>
+                                        <li>@vk.com</li>
+                                        <li>@list.ru</li>
+                                        <li>@rambler.ru</li>
+                                        <li>@live.ru</li>
+                                        <li>@i.ua</li>
+                                        <li>@ya.ru</li>
+                                        <li>@inbox.lv</li>
+                                        <li>@yahoo.de</li>
+                                        <li>@yahoo.com</li>
+                                        <li>@yahoo.it</li>
+                                        <li>@mail.ua</li>
+                                        <li>@web.de</li>
+                                        <li>@yandex.kz</li>
+                                        <li>@tut.by</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </p>
+                        <p>
+                            <label for="pass1"><b>Пароль</b> <i>(минимум 6 символов)</i></label>
+                            <input type="password" name="pass1" id="pass1" class="input" size="20" required>
+                        </p>
+                        <p>
+                            <label for="pass2"><b>Подтвердить пароль</b></label>
+                            <input type="password" name="pass2" id="pass2" class="input" size="20" required>
+                        </p>
+                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                        <div class="g-recaptcha" data-sitekey="6LdKdJEUAAAAAMCqoogLyBpSsT_R3jFzFWLIxpxd"></div>
+                        <input id="check" name="proverka" type="hidden" value="">
+                        <p class="submitl-regs">
+                            <input type="submit" name="wp-submit-proverka-reg" id="wp-submit" value="Регистрация" onclick="document.getElementById('check').value = 'polesecret';">
+                            <input type="hidden" name="redirect_to" value="regs-login?pending=activation">
+                            <input type="hidden" name="instance" value="">
+                            <input type="hidden" name="action" value="register">
+                            <span id="email-submit" style="display:none;">Некорректный email</span>
+                        </p>
+                    </form>
+                    <ul class="tml-action-links">
+                        <li><a href="regs-login.html" rel="nofollow">Войти</a></li>
+                        <li><a href="https://doramy.club/regs-lostpassword" rel="nofollow">Забыли пароль?</a></li>
+                    </ul>
+                </div>
+                <div class="menu-reg">
+                    <a href="index.html">Вернуться на главную</a>
+            </div>
+            </div>
+        </div>
+        <script>
+            const EMAIL_REGEXP = /^[^ ]+\@(?=mail.ru$|ukr.net$|tut.by$|ya.ru$|yandex.kz$|web.de$|mail.ua$|yahoo.it$|yahoo.com$|yahoo.de$|inbox.lv$|i.ua$|live.ru$|rambler.ru$|list.ru$|vk.com$|abv.bg$|zschocho.cz$|icloud.com$|inbox.ru$|bk.ru$|internet.ru$|gmail.com$|yandex.ru$|\s)/i;
+            const input = document.getElementById('user_email');
+            const submitq = document.getElementById('wp-submit');
+            const semail = document.getElementById('email-submit');
+            $('#email-submit').on('click', function() {
+                $('#sose').show(100);
+            });
+            $('.i-Email').on('click', function() {
+                $('.Email-list').slideToggle(100);
+            });
+            function isEmailValid(value) {
+                return EMAIL_REGEXP.test(value);
+            }
+            function onInput() {
+                if (isEmailValid(input.value)) {
+                    input.style.borderColor = 'green';
+                    $('#wp-submit').show(100);
+                    $('#email-submit').hide(100);
+                    $('#sose').hide(100);
+                } else {
+                    input.style.borderColor = 'red';
+                    $('#wp-submit').hide(0);
+                    $('#email-submit').show(0);
+                }
+            }
+            input.addEventListener('input', onInput);
+        </script>
+    </div>
+    
+</body>
+</html>
